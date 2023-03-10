@@ -34,4 +34,25 @@
   font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../fonts/Gilroy-Bold.eot');
+  src: local('../../fonts/Gilroy Bold'), local('Gilroy-Semibold'),
+      url('../../fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../../fonts/Gilroy-Bold.woff2') format('woff2'),
+      url('../../fonts/Gilroy-Bold.woff') format('woff'),
+      url('../../fonts/Gilroy-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../fonts/Gilroy-Extrabold.eot');
+  src: local('../../fonts/Gilroy Extrabold'), local('Gilroy-Semibold'),
+      url('../../fonts/Gilroy-Extrabold.woff2') format('woff2'),
+      url('../../fonts/Gilroy-Extrabold.woff') format('woff'),
+      url('../../fonts/Gilroy-Extrabold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}

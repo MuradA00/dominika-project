@@ -29,7 +29,7 @@ $overlay-clr: hsla(0, 0%, 17%, 0.8);
     @include f-layout(4, $serv-row-gap);
     border-radius: 50%;
     aspect-ratio: 1 / 1;
-    transition: var(--trans-200);
+    transition: all var(--trans-300) !important;
     @include df(column, center);
     justify-content: center;
     background-size: cover;
