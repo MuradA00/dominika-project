@@ -28,6 +28,12 @@ html {
   min-height: -webkit-fill-available;
 }
 
+@include max-width($m-q) {
+  html {
+    overflow-x: hidden;
+  }
+}
+
 *,
 *::after,
 *::before {

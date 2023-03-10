@@ -1,7 +1,7 @@
 AOS.init({
   once: true,
   duration: 600,
-  offset: 250
+  offset: 130
 })
 
 $(document).ready(function() {

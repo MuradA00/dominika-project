@@ -153,6 +153,7 @@ $overlay-clr: hsla(0, 0%, 17%, 0.8);
     }
   }
   .services {
+    padding: rem(70) 0 rem(80);
     &__row-info {
       opacity: 0;
       transition: 200ms ease;
@@ -193,10 +194,22 @@ $overlay-clr: hsla(0, 0%, 17%, 0.8);
       &:nth-child(3) {
         width: 65% !important;
         height: 65% !important;
+        padding: 0.625rem;
+        .services__row-descr {
+          p {
+            font-size: rem(13);
+          }
+        }
       }
       &:nth-child(4) {
         width: 55% !important;
         height: 55% !important;
+        padding: 0.625rem;
+        .services__row-descr {
+          p {
+            font-size: rem(12);
+          }
+        }
       }
     }
   }

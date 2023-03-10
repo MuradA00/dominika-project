@@ -40,6 +40,10 @@
     font-size: 1.25rem;
     font-weight: 500;
     color: var(--w-clr-300);
+    &_selected {
+      color: var(--o-clr);
+      font-weight: 700;
+    }
   }
   &__item {
     transition-duration: 500ms;

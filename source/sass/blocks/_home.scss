@@ -13,6 +13,7 @@
     right: 0;
     top: 0;
     width: clamp(250px, 62.5vw, rem(1000));
+    z-index: 10;
     picture, img {
       width: inherit;
     }
