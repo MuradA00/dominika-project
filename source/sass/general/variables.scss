@@ -1,0 +1,27 @@
+:root {
+  --t-clr: hsla(185, 88%, 37%, 1);
+  --p-clr: hsla(273, 67%, 45%, 1);
+  --o-clr: hsla(31, 92%, 50%, 1);
+  --b-clr: hsla(0, 0%, 17%, 1);
+  --g-clr: hsla(0, 0%, 96%, 1);
+  --w-clr: hsla(0, 0%, 100%, 1);
+  --w-clr-300: hsla(0, 0%, 96%, 1);
+
+  --ff: 'Gilroy';
+
+  --trans-200: 200ms ease;
+  --trans-300: 300ms ease;
+  --trans-400: 400ms ease;
+  --trans-500: 500ms ease;
+}
+
+$container-width: 80.625em;
+$cont-padding: 1.125rem;
+$t-q: 71.875em;
+$m-q: 43.75em;
+$s-mob-q: 29.375em;
+$t-width: 56.25rem;
+$mob-width: 37.5rem;
+
+
+

@@ -1,0 +1,118 @@
+.header {
+  position: absolute;
+  z-index: 1000;
+  top: 1.5625rem;
+  width: 100%;
+  left: 0;
+  &__logo {
+    transition: var(--trans-200);
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  &__burger {
+    display: none;
+    grid-gap: rem(5);
+    justify-content: flex-end;
+    span {
+      display: block;
+      height: 0.25rem;
+      border-radius: 10px;
+      background-color: var(--b-clr);
+      &:nth-child(1) {
+        width: 2.25rem;
+      }
+      &:nth-child(2) {
+        width: 1.1875rem;
+      }
+    }
+  }
+  &__body {
+    @include df(row, start);
+    justify-content: space-between;
+  }
+  &__row {
+    background-color: var(--w-clr-300);
+    border-radius: 60px;
+    @include df(row, center);
+    padding: 1.3125rem 1.875rem;
+    grid-gap: rem(45);
+    &_mob {
+      display: none;
+    }
+  }
+  &__lang {
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      .header__lang-dropdown {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        visibility: visible;
+        pointer-events: all;
+      }
+    }
+  }
+  &__lang-selected {
+    @include df(row, center);
+    grid-gap: rem(7);
+    span {
+      font-weight: 600;
+      font-size: 1.125rem;
+    }
+  }
+  &__lang-dropdown {
+    transition: var(--trans-300);
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    visibility: hidden;
+    pointer-events: none;
+  }
+  &__dropdown {
+    overflow: hidden;
+    margin-top: .5rem;
+    border-radius: 5px;
+    background-color: var(--w-clr-300);
+    li {
+      cursor: pointer;
+      transition: var(--trans-200);
+      font-weight: 600;
+      font-size: 1.125rem;
+      &:hover {
+        background-color: var(--t-clr);
+        color: var(--w-clr-300);
+      }
+      padding: rem(10);
+      text-align: left;
+    }
+  }
+}
+
+@include max-width($t-q) {
+  .header {
+    &__dropdown-item {
+      font-size: 0.875rem !important;
+    }
+  }
+}
+
+@include max-width($m-q) {
+  .header {
+    &__burger {
+      @include df(column, flex-end);
+    }
+    &__row {
+      grid-gap: 3.4375rem !important;
+      background-color: transparent;
+      padding: 0 !important;
+    }
+    &__logo {
+      max-width: rem(77);
+    }
+  }
+  .nav {
+    display: none;
+  }
+}

@@ -1,0 +1,119 @@
+.footer {
+  background-color: var(--b-clr);
+  color: var(--w-clr-300);
+  &__body {
+    padding: rem(25) 0 4.375rem;
+    display: flex;
+    grid-gap: rem(180);
+  }
+  &__col-bottom {
+    &_mob {
+      display: none;
+    }
+  }
+  &__adress {
+    &_mob {
+      display: none;
+    }
+  }
+  &__col {
+    &_logo {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 1.25rem;
+    }
+    &-top {
+      display: flex;
+      align-items: center;
+      grid-gap: rem(57);
+    }
+  }
+  &__adress {
+    max-width: rem(150);
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 175%;
+  }
+  &__links-wrapper {
+    padding-top: 3.6rem;
+    width: 100%;
+    max-width: rem(600);
+    display: flex;
+    justify-content: space-between;
+  }
+  &__links-heading {
+    font-size: rem(20);
+    margin-bottom: rem(8);
+    font-weight: 600;
+    color: var(--t-clr);
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    grid-gap: .9375rem;
+  }
+}
+
+@include max-width($t-q) {
+  .footer {
+    &__logo {
+      flex: 0 0 auto;
+      max-width: rem(130);
+    }
+    &__col {
+      &_third {
+        margin-top: -7rem;
+      }
+      &_logo {
+        grid-gap: rem(45);
+      }
+    }
+    &__links {
+      grid-gap: 0;
+        a {
+          font-size: rem(14);
+        }
+        li {
+          &:not(:last-child) {
+            margin-bottom: 1.125rem;
+          }
+        }
+    }
+    &__col-bottom_mob {
+      font-size: rem(14);
+      line-height: 150%;
+    }
+    &__links-heading {
+      font-size: 1rem;
+    }
+    &__col-bottom {
+      &_desktop {
+        display: none;
+      }
+      &_mob {
+        display: block;
+      }
+    }
+    &__adress {
+      font-size: rem(14);
+    }
+    &__links-heading {
+      grid-gap: 0;
+      margin-bottom: 8px;
+    }
+    &__links-wrapper {
+      padding-top: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: rem(35);
+      flex-wrap: wrap;
+    }
+    &__body {
+      max-width: rem(500);
+      margin: 0 auto;
+      flex-direction: column;
+      grid-gap: rem(30);
+      padding: rem(13) 0 rem(60);
+    }
+  }
+}

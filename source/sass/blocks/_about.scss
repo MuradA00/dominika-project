@@ -1,0 +1,141 @@
+.about {
+ background-color: var(--p-clr);
+ padding: rem(122) 0 6.25rem;
+ position: relative;
+ overflow: hidden;
+ &::before {
+  @include psevdo;
+  width: 85.75rem;
+  height: 85.75rem;
+  background-color: hsla(0, 0%, 85%, .1);
+  border-radius: 50%;
+  right: -20.875rem;
+  top: -45%;
+  z-index: 5;
+ }
+ &__body {
+  position: relative;
+  z-index: 10;
+  margin-bottom: rem(115);
+ }
+ &__bottom-info {
+  display: none;
+ }
+ &__image {
+  position: relative;
+  z-index: 10;
+ }
+ &__title {
+  color: var(--w-clr-300);
+  margin-bottom: 2.25rem;
+  p {
+    position: relative;
+    display: inline;
+    &::after {
+      @include psevdo;
+      position: absolute;
+      top: -1.25rem;
+      right: 1.0625rem;
+      background-image: url('../../img/heading/heading-icon-white.svg');
+      width: 7.8125rem;
+      height: 1.25rem;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 5;
+    }
+  }
+ }
+ &__row {
+  @include df(row, flex-end);
+  justify-content: space-between;
+ }
+ &__descr {
+  max-width: rem(630);
+  p {
+    color: var(--w-clr-300);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%;
+  }
+ }
+}
+
+@include max-width(78em) {
+  .about {
+    &__title {
+     p {
+          &::after {
+            top: initial;
+            bottom: 1.5rem;
+            left: initial;
+          }
+      }
+    }
+  }
+}
+
+@include max-width($t-q) {
+  .about {
+    &__row {
+      grid-gap: 4rem;
+    }
+    &__title {
+      font-size: 2.625rem;
+      p {
+        display: flex;
+        align-items: flex-end;
+        grid-gap: 1rem;
+          &::after {
+            position: relative;
+            width: 3.75rem;
+            height: 0.625rem;
+            right: initial;
+            left: initial;
+            bottom: 0.3rem;
+            display: block;
+          }
+      }
+    }
+  }
+}
+
+@include max-width($m-q) {
+  .about {
+    padding: 2.25rem 0 5rem;
+    &__row {
+      display: none;
+    }
+    &__descr {
+      max-width: rem(360);
+      margin: 0 auto;
+    }
+    &__contact {
+      min-width: rem(295);
+      .btn-text {
+        flex: 1;
+      }
+    }
+    &__image {
+      height: 12.5rem;
+      picture, img {
+        height: inherit;
+        width: 100%;
+      }
+    }
+    &__body {
+      margin-bottom: rem(30);
+    }
+    &__image {
+      margin-bottom: 2.25rem;
+    }
+    &__bottom-info {
+      @include df(column, center);
+      .about__descr {
+        margin-bottom: rem(30);
+        p {
+          font-size: rem(14);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.form {
+  &__flex {
+    display: flex;
+    grid-gap: rem(40);
+  }
+  &__send {
+    &_mob {
+      display: none;
+    }
+  }
+  &__flex-item {
+    flex: 1;
+    textarea {
+      height: 100%;
+      border-radius: 30px !important;
+    }
+    input, textarea {
+      transition: var(--trans-200);
+      width: 100%;
+      outline: none;
+      border: 1px solid var(--w-clr-300);
+      padding: 1.25rem rem(40);
+      background-color: transparent;
+      border-radius: 50px;
+      color: var(--w-clr-300);
+      &::placeholder {
+        color: inherit;
+      }
+      &:focus {
+        border: 1px solid var(--o-clr);
+      }
+    }
+    &_inputs {
+      @include df(column, initial);
+      grid-gap: rem(25);
+    }
+  }
+  &__send {
+    .btn-text {
+      min-width: rem(220);
+    }
+  }
+}
+
+@include max-width($t-q) {
+  .contact {
+    padding: rem(36) 0 rem(80);
+    &__row {
+      grid-gap: 1.5rem;
+      flex-direction: column;
+    }
+    &__form {
+      width: 100%;
+    }
+  }
+}
+
+@include max-width($m-q) {
+  .form {
+    &__flex {
+      flex-direction: column;
+      grid-gap: rem(24);
+      margin-bottom: rem(50);
+    }
+    &__flex-item {
+      input {
+        padding: 0.9063rem 1.875rem;
+      }
+      textarea {
+        padding: 1.5rem 1.875rem;
+      }
+    }
+    &__send {
+      margin: 0 auto;
+      &_desktop {
+        display: none;
+      }
+      &_mob {
+        display: flex;
+      }
+    }
+  }
+}

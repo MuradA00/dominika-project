@@ -1,0 +1,17 @@
+.contact {
+  padding: rem(130) 0;
+  background-image: url('../../img/contact/bg-contact.png');
+  background-size: cover;
+  background-position: center;
+  &__heading {
+    max-width: rem(400);
+    color: var(--w-clr-300);
+  }
+  &__row {
+    @include df(row, flex-start);
+    grid-gap: clamp(5rem, vw(160), 160px);
+  }
+  &__form {
+    flex: 1;
+  }
+}

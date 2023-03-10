@@ -1,0 +1,54 @@
+.title {
+  font-size: clamp(36px, vw(86), 86px);
+  line-height: 100%;
+  font-weight: 700;
+  @include max-width($t-q) {
+    font-size: 2.625rem;
+    img {
+      display: block;
+      width: 3.75rem;
+      height: 0.625rem;
+    }
+  }
+  @include max-width($m-q) {
+    font-size: 2.25rem;
+  }
+  &_flex {
+    @include df(row, flex-end);
+    grid-gap: rem(27);
+    img {
+      transform: translateY(-12px);
+    }
+    @include max-width($m-q) {
+      @include df(row, flex-start);
+      grid-gap: 1rem;
+      img {
+        transform: translateY(10px);
+      }
+    }
+  }
+  &_green {
+    span {
+      color: var(--t-clr);
+    }
+  }
+  &_orange {
+    span {
+      color: var(--o-clr);
+    }
+  }
+}
+
+.large-heading {
+  font-size: clamp(64px, 140vw, 140px);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 100%;
+  @include max-width($t-q) {
+    font-size: rem(82);
+  }
+  @include max-width($m-q) {
+    font-size: rem(64);
+  }
+}
+

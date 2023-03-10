@@ -1,0 +1,46 @@
+.nav {
+  &__list {
+    @include df(row, center);
+    grid-gap: rem(45);
+  }
+  &__link {
+    font-weight: 500;
+    font-size: 1.125rem;
+    transition: var(--trans-200);
+    &:hover {
+      color: var(--o-clr);
+    }
+    &_selected {
+      color: var(--o-clr);
+      font-weight: 700;
+    }
+  }
+}
+
+@include max-width(56.25em) {
+  .nav {
+    &__list {
+      grid-gap: rem(20);
+    }
+    &__link {
+      font-size: rem(14);
+    }
+  }
+  .header {
+    &__lang-selected {
+      span {
+        font-size: rem(14);
+      }
+      img {
+        width: rem(10);
+        height: rem(5);
+      }
+    }
+    &__row {
+      &_desktop {
+        grid-gap: rem(20);
+        padding: rem(15);
+      }
+    }
+  }
+}
